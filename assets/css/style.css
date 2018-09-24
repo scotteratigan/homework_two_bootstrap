@@ -1,4 +1,171 @@
-/*To test linking successfully... working!*/
-/*html {
-	background: blue;
-}*/
+/*
+	Override Bootstrap Colors v1.1 by Scott Ratigan 2018/09/23
+	Purpose: override the default bootstrap colors for the most basic elements: text-color, bg-color, border-color.
+	Does not style some of the more advanced elements.
+
+	To use: change one of the color variables below. To reset back, the default value is also included.;
+
+	Color groups are: danger/dark/info/light/primary/secondary/warning. Using primary for all examples below:
+	primary-color 			:	used for bg-primary, border-primary, text-primary as well as button background, button border 
+	primary-color-alternate :	disabled button, 
+	primary-color-hover		:	btn-primary:hover
+
+*/
+
+:root {
+	--danger-color: #dc3545; /* #dc3545 */
+	--danger-color-alternate: #dc3545; /* #dc3545 */
+	--danger-color-hover: #c82333; /* #c82333 */
+	--danger-color-secondary: #f8d7da; /* #f8d7da */
+	
+	--dark-color: #343a40; /* #343a40 */
+	--dark-color-alternate: #343a40; /* #343a40 */
+	--dark-color-hover: #23272b; /* #23272b */
+	--dark-color-secondary: #d6d8d9; /* #d6d8d9 */
+	
+	--info-color: #17a2b8; /* #17a2b8 */
+	--info-color-alternate: #17a2b8; /* #17a2b8 */
+	--info-color-hover: #138496; /* #138496 */
+	--info-color-secondary: #d1ecf1; /* #d1ecf1 */
+	
+	--light-color: #f8f9fa; /* #f8f9fa */
+	--light-color-alternate: #f8f9fa; /* #f8f9fa */
+	--light-color-hover: #e2e6ea; /* #e2e6ea */
+	--light-color-secondary: #fefefe; /* #fefefe */
+
+	--primary-color: #007bff; /* #007bff */
+	--primary-color-alternate: #007bff; /* #007bff */
+	--primary-color-hover: #0069d9; /* #0069d9 */
+	--primary-color-secondary: #cce5ff; /* cce5ff */
+	
+	--secondary-color: #6c757d; /* #6c757d */
+	--secondary-color-alternate: #6c757d; /* #6c757d */
+	--secondary-color-hover: #5a6268; /* 5a6268 */
+	--secondary-color-secondary: #e2e3e5; /* #e2e3e5 */
+
+	--success-color: #28a745; /* #28a745 */
+	--success-color-alternate: #28a745; /* #28a745 */
+	--success-color-hover: #218838; /* #218838 */
+	--success-color-secondary: #d4edda; /* #d4edda */
+
+	--warning-color: #ffc107; /* #ffc107 */
+	--warning-color-alternate: #ffc107; /* #ffc107 */
+	--warning-color-hover: #e0a800; /* #e0a800 */
+	--warning-color-secondary: #fff3cd; /* #fff3cd */
+
+	/* Override on color settings: */
+	--primary-color: #666666; /* dark grey */
+	--primary-color-secondary: #d6d8d9; /*light grey*/
+	--secondary-color: cadetblue; /* cadetblue */
+	--secondary-color-secondary: #afcecf; /*lighter shade of cadetblue */
+	--info-color: #b3b3b3; /*light/medium grey*/
+
+	/* Below section is optional - if you set a light color for a typically dark element, or vice-versa, you may want to change the text color: */
+	--danger-color-text: var(--light-color);
+	--dark-color-text: var(--light-color);
+	--info-color-text: var(--light-color);
+	--light-color-text: var(--dark-color); /*dark*/
+	--primary-color-text: var(--light-color);
+	--secondary-color-text: var(--light-color);
+	--success-color-text: var(--light-color);
+	--warning-color-text: var(--dark-color); /*dark*/
+
+	/* Override on text settings: */
+
+
+}
+
+/* Do not make changes below this line */
+/* Note: whitespace chosen for density and line-sorting ability. */;
+
+.alert-danger { background: var(--danger-color-secondary) !important; }
+.alert-dark { background: var(--dark-color-secondary) !important; }
+.alert-info { background: var(--info-color-secondary) !important; }
+.alert-light { background: var(--light-color-secondary) !important; }
+.alert-primary { background: var(--primary-color-secondary) !important; }
+.alert-secondary { background: var(--secondary-color-secondary) !important; }
+.alert-success { background: var(--success-color-secondary) !important; }
+.alert-warning { background: var(--warning-color-secondary) !important; }
+
+.bg-danger { background: var(--danger-color) !important; }
+.bg-dark { background: var(--dark-color) !important; }
+.bg-info { background: var(--info-color) !important; }
+.bg-light { background: var(--light-color) !important; }
+.bg-primary { background: var(--primary-color) !important; }
+.bg-secondary { background: var(--secondary-color) !important; }
+.bg-success { background: var(--success-color) !important; }
+.bg-warning { background: var(--warning-color) !important; }
+.border-danger { border-color: var(--danger-color) !important; }
+.border-dark { border-color: var(--dark-color) !important; }
+.border-info { border-color: var(--info-color) !important; }
+.border-light { border-color: var(--light-color) !important; }
+.border-primary { border-color: var(--primary-color) !important; }
+.border-secondary { border-color: var(--secondary-color) !important; }
+.border-success { border-color: var(--success-color) !important; }
+.border-warning { border-color: var(--warning-color) !important; }
+.text-danger { color: var(--danger-color) !important; }
+.text-dark { color: var(--dark-color) !important; }
+.text-info { color: var(--info-color) !important; }
+.text-light { color: var(--light-color) !important; }
+.text-primary { color: var(--primary-color) !important; }
+.text-secondary { color: var(--secondary-color) !important; }
+.text-success { color: var(--success-color) !important; }
+.text-warning { color: var(--warning-color) !important; }
+
+.btn-danger { color: var(--danger-color-text); background-color: var(--danger-color);  border-color: var(--danger-color); }
+.btn-danger.disabled, .btn-danger:disabled { color: var(--danger-color-text); background-color: var(--danger-color-alternate); border-color: var(--danger-color-alternate); }
+.btn-danger:hover { color: var(--danger-color-text); background-color: var(--danger-color-hover); }
+.btn-dark { color: var(--dark-color-text); background-color: var(--dark-color); border-color: var(--dark-color); }
+.btn-dark.disabled, .btn-dark:disabled { color: var(--dark-color-text); background-color: var(--dark-color-alternate); border-color: var(--dark-color-alternate); }
+.btn-dark:hover { color: var(--dark-color-text); background-color: var(--dark-color-hover); }
+.btn-info { color: var(--info-color-text); background-color: var(--info-color); border-color: var(--info-color); }
+.btn-info.disabled, .btn-info:disabled { color: var(--info-color-text); background-color: var(--info-color-alternate); border-color: var(--info-color-alternate); }
+.btn-info:hover { color: var(--info-color-text); background-color: var(--info-color-hover); }
+.btn-light { color: var(--light-color-text); background-color: var(--light-color); border-color: var(--light-color); }
+.btn-light.disabled, .btn-light:disabled { color: var(--light-color-text); background-color: var(--light-color-alternate); border-color: var(--light-color-alternate); }
+.btn-light:hover { color: var(--light-color-text); background-color: var(--light-color-hover); }
+.btn-primary { color: var(--primary-color-text); background-color: var(--primary-color); border-color: var(--primary-color); }
+.btn-primary.disabled, .btn-primary:disabled { color: var(--primary-color-text); background-color: var(--primary-color-alternate); border-color: var(--primary-color-alternate); }
+.btn-primary:hover { color: var(--primary-color-text); background-color: var(--primary-color-hover); }
+.btn-secondary { color: var(--secondary-color-text); background-color: var(--secondary-color); border-color: var(--secondary-color); }
+.btn-secondary.disabled, .btn-secondary:disabled { color: var(--secondary-color-text); background-color: var(--secondary-color-alternate); border-color: var(--secondary-color-alternate); }
+.btn-secondary:hover { color: var(--secondary-color-text); background-color: var(--secondary-color-hover); }
+.btn-success { color: var(--success-color-text); background-color: var(--success-color); border-color: var(--success-color); }
+.btn-success.disabled, .btn-success:disabled { color: var(--success-color-text); background-color: var(--success-color-alternate); border-color: var(--success-color-alternate); }
+.btn-success:hover { color: var(--success-color-text); background-color: var(--success-color-hover); }
+.btn-warning { color: var(--warning-color-text); background-color: var(--warning-color); border-color: var(--warning-color); }
+.btn-warning.disabled, .btn-warning:disabled { color: var(--warning-color-text); background-color: var(--warning-color-alternate); border-color: var(--warning-color-alternate); }
+.btn-warning:hover { color: var(--warning-color-text); background-color: var(--warning-color-hover); }
+
+/*css specific to current page*/
+
+body {
+	background: url(../images/wooden.jpg) center;
+	background-size: 100% auto; /*100% x-axis (stretch), auto on y axis (tile)*/
+	background-color: #cccccc; /* Alternately, with no pic. */
+}
+
+hr {
+	height: .10rem;
+}
+
+.navbar-brand {
+	font-size: 2.2rem;
+	margin: 0px;
+	font-family: 'Georgia', Times, Times New Roman, serif;
+}
+
+.border-width-5 {
+	border-width: 5px !important;
+}
+
+.card-caption {
+	text-align: center;
+	margin-top: 6rem!important;
+	padding: 0px;
+	height: 1.6rem;
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+}
