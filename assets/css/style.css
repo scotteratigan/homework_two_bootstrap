@@ -112,6 +112,7 @@ body {
 	background: url(../images/wooden.jpg) center;
 	background-size: 100% auto; /*100% x-axis (stretch), auto on y axis (tile)*/
 	background-color: #cccccc; /* Alternately, with no pic. */
+	/*Note: I am not explicitly setting fonts because I am choosing to use Bootstrap's default typography*/
 }
 
 hr {
