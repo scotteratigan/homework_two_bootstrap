@@ -1,14 +1,16 @@
 /*
 	Override Bootstrap Colors v1.1 by Scott Ratigan 2018/09/23
-	Purpose: override the default bootstrap colors for the most basic elements: text-color, bg-color, border-color.
-	Does not style some of the more advanced elements.
+	Purpose: override the default bootstrap colors for the most basic elements: text-color, bg-color, border-color without using SASS.
+	Does not yet style all elements.
 
-	To use: change one of the color variables below. To reset back, the default value is also included.;
-
+	To use: change one of the color variables below. To reset back, the default value is also included.
 	Color groups are: danger/dark/info/light/primary/secondary/warning. Using primary for all examples below:
 	primary-color 			:	used for bg-primary, border-primary, text-primary as well as button background, button border 
-	primary-color-alternate :	disabled button, 
+	primary-color-seconary	:	alternate shade of primary color, a few shades lighter (darker on light colors)
+	primary-color-alternate :	disabled items, again typically lighter
 	primary-color-hover		:	btn-primary:hover
+
+	See https://github.com/scotteratigan/bootstrap_color_override for more info.
 
 */
 
@@ -72,20 +74,12 @@
 
 	/* Override on text settings: */
 
-
+	/* none currently set */
 }
 
-/* Do not make changes below this line */
-/* Note: whitespace chosen for density and line-sorting ability. */;
-
-.alert-danger { background: var(--danger-color-secondary) !important; }
-.alert-dark { background: var(--dark-color-secondary) !important; }
-.alert-info { background: var(--info-color-secondary) !important; }
-.alert-light { background: var(--light-color-secondary) !important; }
-.alert-primary { background: var(--primary-color-secondary) !important; }
-.alert-secondary { background: var(--secondary-color-secondary) !important; }
-.alert-success { background: var(--success-color-secondary) !important; }
-.alert-warning { background: var(--warning-color-secondary) !important; }
+/*	Do not make changes below this line
+	Note: whitespace chosen for density and line-sorting ability.
+	Important must be used for these selectors to work consistently on all elements. (Test it if you don't believe me!) */
 
 .bg-danger { background: var(--danger-color) !important; }
 .bg-dark { background: var(--dark-color) !important; }
@@ -112,32 +106,7 @@
 .text-success { color: var(--success-color) !important; }
 .text-warning { color: var(--warning-color) !important; }
 
-.btn-danger { color: var(--danger-color-text); background-color: var(--danger-color);  border-color: var(--danger-color); }
-.btn-danger.disabled, .btn-danger:disabled { color: var(--danger-color-text); background-color: var(--danger-color-alternate); border-color: var(--danger-color-alternate); }
-.btn-danger:hover { color: var(--danger-color-text); background-color: var(--danger-color-hover); }
-.btn-dark { color: var(--dark-color-text); background-color: var(--dark-color); border-color: var(--dark-color); }
-.btn-dark.disabled, .btn-dark:disabled { color: var(--dark-color-text); background-color: var(--dark-color-alternate); border-color: var(--dark-color-alternate); }
-.btn-dark:hover { color: var(--dark-color-text); background-color: var(--dark-color-hover); }
-.btn-info { color: var(--info-color-text); background-color: var(--info-color); border-color: var(--info-color); }
-.btn-info.disabled, .btn-info:disabled { color: var(--info-color-text); background-color: var(--info-color-alternate); border-color: var(--info-color-alternate); }
-.btn-info:hover { color: var(--info-color-text); background-color: var(--info-color-hover); }
-.btn-light { color: var(--light-color-text); background-color: var(--light-color); border-color: var(--light-color); }
-.btn-light.disabled, .btn-light:disabled { color: var(--light-color-text); background-color: var(--light-color-alternate); border-color: var(--light-color-alternate); }
-.btn-light:hover { color: var(--light-color-text); background-color: var(--light-color-hover); }
-.btn-primary { color: var(--primary-color-text); background-color: var(--primary-color); border-color: var(--primary-color); }
-.btn-primary.disabled, .btn-primary:disabled { color: var(--primary-color-text); background-color: var(--primary-color-alternate); border-color: var(--primary-color-alternate); }
-.btn-primary:hover { color: var(--primary-color-text); background-color: var(--primary-color-hover); }
-.btn-secondary { color: var(--secondary-color-text); background-color: var(--secondary-color); border-color: var(--secondary-color); }
-.btn-secondary.disabled, .btn-secondary:disabled { color: var(--secondary-color-text); background-color: var(--secondary-color-alternate); border-color: var(--secondary-color-alternate); }
-.btn-secondary:hover { color: var(--secondary-color-text); background-color: var(--secondary-color-hover); }
-.btn-success { color: var(--success-color-text); background-color: var(--success-color); border-color: var(--success-color); }
-.btn-success.disabled, .btn-success:disabled { color: var(--success-color-text); background-color: var(--success-color-alternate); border-color: var(--success-color-alternate); }
-.btn-success:hover { color: var(--success-color-text); background-color: var(--success-color-hover); }
-.btn-warning { color: var(--warning-color-text); background-color: var(--warning-color); border-color: var(--warning-color); }
-.btn-warning.disabled, .btn-warning:disabled { color: var(--warning-color-text); background-color: var(--warning-color-alternate); border-color: var(--warning-color-alternate); }
-.btn-warning:hover { color: var(--warning-color-text); background-color: var(--warning-color-hover); }
-
-/*css specific to current page*/
+/* css specific to portfolio page */
 
 body {
 	background: url(../images/wooden.jpg) center;
@@ -147,12 +116,6 @@ body {
 
 hr {
 	height: .10rem;
-}
-
-.navbar-brand {
-	font-size: 2.2rem;
-	margin: 0px;
-	font-family: 'Georgia', Times, Times New Roman, serif;
 }
 
 .border-width-5 {
@@ -168,4 +131,23 @@ hr {
 	bottom: 0px;
 	left: 0px;
 	right: 0px;
+}
+
+.navbar-brand {
+	font-size: 2.2rem;
+	margin: 0px;
+	font-family: 'Georgia', Times, Times New Roman, serif;
+}
+
+/*In order to prevent the navigation hamburger from wrapping in the navbar
+and to give more space for screen content on narrow devices:*/
+@media all and (max-width: 505px) {
+	.container-fluid,
+	.navbar,
+	.navbar-brand {
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+		margin-left: 1% !important;
+		margin-right: 1% !important;
+	}
 }
